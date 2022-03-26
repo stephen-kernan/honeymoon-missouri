@@ -1,3 +1,13 @@
+@import "open-props/style";
+@import "open-props/normalize";
+
+:root {
+  --brightBlue: #55c2ff;
+  --roseRed: #a10000;
+  --motelLight: #fff7dc;
+  --midnight: #111315;
+}
+
 html,
 body {
   padding: 0;

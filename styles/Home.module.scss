@@ -1,0 +1,73 @@
+// -----------------------
+// ---- LANDING PAGE -----
+// -----------------------
+
+.main {
+  height: 120vh;
+  display: flex;
+  flex-flow: column;
+}
+
+.titleContainer {
+  background-image: url("../public/motel-sign-mobile.png");
+  background-size: cover;
+  background-position: -2em;
+  height: 100%;
+  width: 100%;
+}
+
+.title {
+  color: var(--brightBlue);
+  font-family: "Pinyon Script", cursive;
+  padding-left: 2rem;
+  padding-top: 3.5rem;
+}
+
+// ----------------
+// ---- PANES -----
+// ----------------
+.pane {
+  height: 120vh;
+  display: grid;
+
+  h2 {
+    font-family: "Playfair Display", serif;
+    padding-left: 2rem;
+    margin-bottom: 2.5rem;
+  }
+
+  p {
+    font-family: "Epilogue", sans-serif;
+    font-weight: 300;
+    line-height: 1.5rem;
+    padding-left: 2rem;
+    padding-right: 3rem;
+  }
+
+  .paneTextContainer {
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+}
+
+.pane:last-of-type {
+  height: 100vh;
+}
+
+.tan {
+  background-color: var(--motelLight);
+  color: var(--roseRed);
+
+  h2 {
+    color: var(--roseRed);
+  }
+}
+
+.dark {
+  background-color: var(--midnight);
+  color: var(--brightBlue);
+
+  h2 {
+    color: var(--brightBlue);
+  }
+}
