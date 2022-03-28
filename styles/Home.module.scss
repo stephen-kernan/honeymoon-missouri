@@ -19,6 +19,7 @@
 .title {
   color: var(--brightBlue);
   font-family: "Pinyon Script", cursive;
+  font-size: 2rem;
   padding-left: 2rem;
   padding-top: 3.5rem;
 }
@@ -27,13 +28,12 @@
 // ---- PANES -----
 // ----------------
 .pane {
-  height: 120vh;
+  padding-block: 10rem;
   display: grid;
 
   h2 {
     font-family: "Playfair Display", serif;
     padding-left: 2rem;
-    margin-bottom: 2.5rem;
   }
 
   p {
@@ -45,14 +45,36 @@
   }
 
   .paneTextContainer {
+    display: flex;
+    flex-flow: column;
     margin-top: auto;
     margin-bottom: auto;
   }
+
+  .paneTitle {
+    font-size: 1.75rem;
+  }
+
+  .profilePicture {
+    aspect-ratio: var(--ratio-square);
+    position: relative;
+    width: 80%;
+    margin-left: 2rem;
+    margin-block: 4rem;
+  }
 }
 
-.pane:last-of-type {
-  height: 100vh;
+.nonBio {
+  height: 100vh !important;
 }
+
+.nonBioTitle {
+  margin-bottom: 2rem;
+}
+
+// .pane:last-of-type {
+//   height: 100vh;
+// }
 
 .tan {
   background-color: var(--motelLight);
@@ -60,6 +82,11 @@
 
   h2 {
     color: var(--roseRed);
+  }
+
+  .showMore {
+    background-color: var(--roseRed);
+    color: white;
   }
 }
 
@@ -69,5 +96,57 @@
 
   h2 {
     color: var(--brightBlue);
+  }
+  .showMore {
+    background-color: var(--brightBlue);
+    color: var(--midnight);
+  }
+}
+.showMore {
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
+  margin-left: auto;
+  margin-right: calc(20% - 2rem);
+}
+
+@media screen and (min-width: 670px) {
+  .nonBioTitle {
+    margin-left: calc(20% - 2rem);
+  }
+
+  .pane {
+    .paneTitle {
+      margin-left: calc(15% - 2rem);
+    }
+
+    .profilePicture {
+      width: max(35vw, 35rem);
+      margin-left: 15%;
+    }
+
+    p {
+      margin-left: 30%;
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .nonBioTitle {
+    margin-left: calc(30% - 2rem);
+  }
+
+  .pane {
+    .paneTitle {
+      margin-left: calc(25% - 2rem);
+    }
+
+    .profilePicture {
+      width: max(35vw, 35rem);
+      margin-left: 25%;
+    }
+
+    p {
+      margin-left: 35%;
+    }
   }
 }
