@@ -17,7 +17,7 @@ export const Bio = ({
     setExpanded(!expanded);
   };
 
-  const buttonLabel = expanded ? "Show Less" : "Show More"
+  const buttonLabel = expanded ? "Show Less" : "Show More";
 
   return (
     <div className={`${home.pane} ${home[variant]}`}>
@@ -26,7 +26,8 @@ export const Bio = ({
           {name} – {role}{" "}
         </h2>
         <div className={home.profilePicture}>
-          <Image src={imgPath} alt="" layout="fill" objectFit="cover" />
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src={imgPath} alt="" />
         </div>
         {content.map(
           (paragraph, i) =>

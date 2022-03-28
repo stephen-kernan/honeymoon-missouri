@@ -56,11 +56,16 @@
   }
 
   .profilePicture {
-    aspect-ratio: var(--ratio-square);
     position: relative;
     width: 80%;
     margin-left: 2rem;
     margin-block: 4rem;
+
+    img {
+      aspect-ratio: var(--ratio-square);
+      object-fit: cover;
+      width: 100%;
+    }
   }
 }
 
