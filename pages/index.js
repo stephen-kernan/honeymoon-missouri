@@ -1,6 +1,8 @@
 import Head from "next/head";
 import Image from "next/image";
 import { Bio } from "../components/Bio/Bio";
+import { PhotoGrid } from "../components/PhotoGrid/PhotoGrid";
+import { TrailerSection } from "../components/TrailerSection/TrailerSection";
 import styles from "../styles/Home.module.scss";
 
 export const Home = () => {
@@ -41,8 +43,9 @@ export const Home = () => {
           </p>
         </div>
       </div>
+      <TrailerSection variant="tan" />
       <Bio
-        variant="tan"
+        variant="dark"
         name="Joe Eckstein"
         role="Director"
         paragraphCount={2}
@@ -56,7 +59,7 @@ export const Home = () => {
         ]}
       />
       <Bio
-        variant="dark"
+        variant="tan"
         name="Cassie Ferrick"
         role="Archie"
         imgPath="/cass.jpg"
@@ -66,7 +69,7 @@ export const Home = () => {
       />
 
       <Bio
-        variant="tan"
+        variant="dark"
         name="Brandan Haskell"
         role="Cinematographer"
         imgPath="/brandan-haskell.jpg"
@@ -76,7 +79,7 @@ export const Home = () => {
         ]}
       />
       <Bio
-        variant="dark"
+        variant="tan"
         name="Willis McCord"
         role="Producer"
         imgPath="/willis.jpg"
@@ -85,6 +88,65 @@ export const Home = () => {
           " He previously assisted the Below The Line department of ICM Partners and supported the Executive Producer of Marvel's Film, “Shang-Chi and the Legend of the 10 Rings.” He began his career as a 2nd AD on Eric Hurt’s feature “The Machinery of Dreams” before moving out to California. He graduated from the University of Virginia with a degree in Media Studies.",
         ]}
       />
+      <PhotoGrid
+        title="Honeymoon Missouri Stills"
+        variant="dark"
+        photos={[1, 2, 3, 4, 5, 6]}
+      />
+      <PhotoGrid
+        title="Honeymoon Missouri BTS"
+        variant="tan"
+        photos={[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]}
+      />
+      <footer className={styles.footer}>
+        <div className={styles.footerContent}>
+          <h2>Credits</h2>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloremque
+            nostrum repellendus iure natus sunt commodi similique fuga magnam,
+            porro optio quasi rerum voluptas id mollitia soluta corporis totam
+            debitis amet!
+          </p>
+        </div>
+        <div className={styles.footerContent}>
+          <h2>The director wishes to thank:</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, vel
+            voluptatum. Quisquam suscipit vel maxime illum repellat totam
+            doloribus rerum neque, dolorem voluptatibus quod repellendus sit
+            animi eos quasi excepturi?
+          </p>
+        </div>
+        <div className={styles.footerContent}>
+          <h2>With special thanks to:</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum qui
+            cupiditate deleniti facilis at natus provident animi ipsum,
+            similique molestias sequi modi dicta sapiente consequatur, corporis
+            consectetur consequuntur amet quibusdam!
+          </p>
+        </div>
+        <div className={styles.footerLogo}>
+          <a
+            rel="noreferrer"
+            target="_blank"
+            href="https://www.facebook.com/MissouriMovie/"
+          >
+            <img src="/facebooklogo.png" alt="" />
+          </a>
+
+          <a
+            rel="noreferrer"
+            target="_blank"
+            href="https://www.instagram.com/honeymoonmissourifilm/?hl=en"
+          >
+            <img src="/instalogo.png" alt="" />
+          </a>
+        </div>
+        <div className={styles.footerLogo} >
+          <a href="https://www.imdb.com/title/tt15090714/">Visit Honeymoon Missouri on IMDB</a>
+        </div>
+      </footer>
     </div>
   );
 };

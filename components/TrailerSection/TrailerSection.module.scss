@@ -1,0 +1,11 @@
+.trailerBox {
+  background-color: grey;
+  aspect-ratio: var(--ratio-widescreen);
+  width: 95%;
+  margin-inline: auto;
+}
+@media screen and (min-width: 769px){
+  .trailerBox{
+    width: 60%;
+  }
+}

@@ -1,0 +1,36 @@
+.gridImage {
+  aspect-ratio: var(--ratio-widescreen);
+  background-color: gray;
+}
+.gridContainer {
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: 85%;
+  gap: 1rem;
+  justify-content: center;
+}
+
+@media screen and (min-width: 426px) {
+  .gridContainer {
+    grid-template-columns: repeat(2, 1fr);
+    width: 85%;
+    margin-inline: auto;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .gridContainer {
+    grid-template-columns: repeat(3, 1fr);
+    width: 85%;
+    margin-inline: auto;
+  }
+}
+.title {
+  width: 85%;
+  margin-inline: auto;
+  margin-bottom: 2rem;
+
+  h2 {
+    padding-left: 0;
+  }
+}

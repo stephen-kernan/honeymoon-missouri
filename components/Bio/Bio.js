@@ -1,6 +1,4 @@
 import home from "../../styles/Home.module.scss";
-import bio from "./Bio.module.scss";
-import Image from "next/image";
 import { useState } from "react";
 
 export const Bio = ({
