@@ -1,8 +1,7 @@
 import home from "../../styles/Home.module.scss";
 import { useState } from "react";
 
-export const Bio = ({
-  variant,
+export const VerticalBio = ({
   name,
   role,
   imgPath,
@@ -18,7 +17,7 @@ export const Bio = ({
   const buttonLabel = expanded ? "Show Less" : "Show More";
 
   return (
-    <div className={`${home.pane} ${home[variant]}`}>
+    <div className={home.pane}>
       <div className={home.paneTextContainer}>
         <h2 className={home.paneTitle}>
           {name} – {role}{" "}
@@ -31,7 +30,7 @@ export const Bio = ({
           (paragraph, i) =>
             (i <= paragraphCount - 1 || expanded) && (
               <>
-                <p key={paragraph[0]}>{paragraph}</p>
+                <p key={paragraph[0] + i}>{paragraph}</p>
                 <br />
               </>
             )

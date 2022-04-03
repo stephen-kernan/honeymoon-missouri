@@ -1,11 +1,27 @@
 import Head from "next/head";
 import Image from "next/image";
-import { Bio } from "../components/Bio/Bio";
+import { Bio } from "../components/Bio/VerticalBio";
+import { MobileBio } from "../components/Bio/MobileBio";
+import { DesktopBio } from "../components/Bio/DesktopBio";
 import { PhotoGrid } from "../components/PhotoGrid/PhotoGrid";
 import { TrailerSection } from "../components/TrailerSection/TrailerSection";
 import styles from "../styles/Home.module.scss";
+import { useEffect, useState } from "react";
 
 export const Home = () => {
+  const initialWidth = typeof window !== "undefined" ? window.innerWidth : null;
+  const [width, setWidth] = useState(initialWidth);
+
+  const resize = () => {
+    if (typeof window !== "undefined") {
+      setWidth(window.innerWidth);
+    }
+  };
+
+  useEffect(() => {
+    window.onresize = resize;
+  });
+
   return (
     <div className={styles.container}>
       <Head>
@@ -21,7 +37,7 @@ export const Home = () => {
           <h1 className={styles.title}>Honeymoon Missouri</h1>
         </div>
       </div>
-      <div className={`${styles.pane} ${styles.tan} ${styles.nonBio}`}>
+      <div className={`${styles.pane} ${styles.nonBio}`}>
         <div className={styles.paneTextContainer}>
           <h2 className={styles.nonBioTitle}>Log Line</h2>
           <p>
@@ -32,7 +48,7 @@ export const Home = () => {
           </p>
         </div>
       </div>
-      <div className={`${styles.pane} ${styles.dark} ${styles.nonBio}`}>
+      <div className={`${styles.pane} ${styles.nonBio}`}>
         <div className={styles.paneTextContainer}>
           <h2 className={styles.nonBioTitle}>Director's Statement</h2>
           <p>
@@ -44,57 +60,10 @@ export const Home = () => {
         </div>
       </div>
       <TrailerSection variant="tan" />
-      <Bio
-        variant="dark"
-        name="Joe Eckstein"
-        role="Director"
-        paragraphCount={2}
-        imgPath="/joe-profile.jpeg"
-        content={[
-          " Joe Eckstein was born in St. Louis, Missouri in 1995. Joe’s childhood consisted of fishing, friends, hunting, being outdoors and all the pleasantries that come with living in the midwest, but he was morbidly fascinated with the dark undertones of society that contradicted his world.",
-          "As a film-obsessed freshman at the University of Missouri, Joe honed his storytelling abilities through journalism and film-intensive courseloads. Upon graduation, he worked as an editor/project coordinator on a Star Trek docu-series before giving Missouri a valedictory wave and moving to Los Angeles. While living in South Central with fifteen other people, Joe committed two years learning the technical craft of special effects for the house that handled Apocalypse Now, The Godfather, Forrest Gump, and Pirates of the Caribbean.",
-          "When the pandemic hit, Joe refused to sit still, spending his freetime producing a crowdfunded short project titled Honeymoon Missouri and writing a feature epic that placed in the second round of the Austin Film Festival's 2021 Screenplay Competition, besting over 15,000 other submissions. He also proceeded to work in the special effects departments for Searchlight's Quasi, Paramount's The Offer, Hulu's How I Met Your Father, and HBO's Euphoria. He can tell you right here right now that Lexi's play was not something that could have been accomplished by high schoolers.",
-          'Joe is inspired by danger, the great outdoors, and Kendrick Lamar. He wants to tell stories that validate the presence of bravery in humankind and may someday be in the "forbidden" section of dystopian libraries. Stories that humanity may be more comfortable keeping in the dark, yet stories that are undeniably real.',
-          "He intends to have more fun than should be legal in the process.",
-        ]}
-      />
-      <Bio
-        variant="tan"
-        name="Cassie Ferrick"
-        role="Archie"
-        imgPath="/cass.jpg"
-        content={[
-          " Cassie is an LA based actor. She grew up in Kansas City, Missouri and began acting in high school, graduating from The University of Missouri with a B.A. in Theatre Performance. Cassie loves bikerides, hiking, music, coffee, and cats. Which are in her words 'the things people say to make themselves seem cool but relatable'.",
-        ]}
-      />
-
-      <Bio
-        variant="dark"
-        name="Brandan Haskell"
-        role="Cinematographer"
-        imgPath="/brandan-haskell.jpg"
-        content={[
-          "Brandan Haskell is a filmmaker who made the great escape from the midwest to the west coast. Since moving to Los Angeles, he has helped several projects come to life through the sensor and celluloid.",
-          "He is a cinematographer who has most notably completed his first feature film Rebel//Rebel (2021). Before then, he has done music videos, commercials, and worked as a second unit DP on a widely released feature film, Rollers (2020). Solely focused on the story, Brandan’s work offers a wide range of techniques, lenses, and exposures. His work can be noticed by the attention to the frame.",
-        ]}
-      />
-      <Bio
-        variant="tan"
-        name="Willis McCord"
-        role="Producer"
-        imgPath="/willis.jpg"
-        content={[
-          ' Willis is a Virginia raised, Los Angeles based Producer. He produced the festival nominated horror short film, “Psychosis,” which is distributed by DUST, and "Meow, Meredith." He currently works for Universal Pictures in Physical Production as a Staff Coordinator.',
-          " He previously assisted the Below The Line department of ICM Partners and supported the Executive Producer of Marvel's Film, “Shang-Chi and the Legend of the 10 Rings.” He began his career as a 2nd AD on Eric Hurt’s feature “The Machinery of Dreams” before moving out to California. He graduated from the University of Virginia with a degree in Media Studies.",
-        ]}
-      />
+      {width > 426 ? <DesktopBio /> : <MobileBio />}
+      <PhotoGrid title="Stills" variant="dark" photos={[1, 2, 3, 4, 5, 6]} />
       <PhotoGrid
-        title="Honeymoon Missouri Stills"
-        variant="dark"
-        photos={[1, 2, 3, 4, 5, 6]}
-      />
-      <PhotoGrid
-        title="Honeymoon Missouri BTS"
+        title="Behind the Scenes"
         variant="tan"
         photos={[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]}
       />
@@ -117,7 +86,7 @@ export const Home = () => {
             animi eos quasi excepturi?
           </p>
         </div>
-        <div className={styles.footerContent}>
+        {/* <div className={styles.footerContent}>
           <h2>With special thanks to:</h2>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum qui
@@ -125,7 +94,7 @@ export const Home = () => {
             similique molestias sequi modi dicta sapiente consequatur, corporis
             consectetur consequuntur amet quibusdam!
           </p>
-        </div>
+        </div> */}
         <div className={styles.footerLogo}>
           <a
             rel="noreferrer"
@@ -143,8 +112,10 @@ export const Home = () => {
             <img src="/instalogo.png" alt="" />
           </a>
         </div>
-        <div className={styles.footerLogo} >
-          <a href="https://www.imdb.com/title/tt15090714/">Visit Honeymoon Missouri on IMDB</a>
+        <div className={styles.footerLogo}>
+          <a href="https://www.imdb.com/title/tt15090714/">
+            Visit Honeymoon Missouri on IMDB
+          </a>
         </div>
       </footer>
     </div>
