@@ -1,26 +1,15 @@
 import Head from "next/head";
-import Image from "next/image";
-import { Bio } from "../components/Bio/VerticalBio";
 import { MobileBio } from "../components/Bio/MobileBio";
 import { DesktopBio } from "../components/Bio/DesktopBio";
 import { PhotoGrid } from "../components/PhotoGrid/PhotoGrid";
 import { TrailerSection } from "../components/TrailerSection/TrailerSection";
 import styles from "../styles/Home.module.scss";
-import { useEffect, useState } from "react";
+import { useState } from "react";
+import { useWindowSize } from "../helpers/useWindowSize";
 
 export const Home = () => {
-  const initialWidth = typeof window !== "undefined" ? window.innerWidth : null;
-  const [width, setWidth] = useState(initialWidth);
-
-  const resize = () => {
-    if (typeof window !== "undefined") {
-      setWidth(window.innerWidth);
-    }
-  };
-
-  useEffect(() => {
-    window.onresize = resize;
-  });
+  const size = useWindowSize();
+  const [width] = useState(size.width);
 
   return (
     <div className={styles.container}>
@@ -60,7 +49,7 @@ export const Home = () => {
         </div>
       </div>
       <TrailerSection variant="tan" />
-      {width > 426 ? <DesktopBio /> : <MobileBio />}
+      {width < 426 || !width ? <DesktopBio /> : <MobileBio />}
       <PhotoGrid title="Stills" variant="dark" photos={[1, 2, 3, 4, 5, 6]} />
       <PhotoGrid
         title="Behind the Scenes"
