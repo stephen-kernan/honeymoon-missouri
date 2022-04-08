@@ -7,6 +7,7 @@ export const HorizontalBio = ({
   imgPath,
   content = [],
   paragraphCount = 1,
+  alt
 }) => {
   const [expanded, setExpanded] = useState(false);
 
@@ -20,7 +21,7 @@ export const HorizontalBio = ({
     <div className={home.horizontalBio}>
       <div className={home.paneTextContainer}>
         <div className={home.profilePicture}>
-          <img src={imgPath} alt="" />
+          <img src={imgPath} alt={alt} />
         </div>
         <div>
           <h2 className={home.paneTitle}>

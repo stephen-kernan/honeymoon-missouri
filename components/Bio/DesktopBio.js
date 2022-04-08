@@ -10,6 +10,7 @@ export const DesktopBio = () => {
         role="Director"
         paragraphCount={2}
         imgPath="/joe-profile.jpeg"
+        alt="Photo of director Joe Eckstein"
         content={[
           " Joe Eckstein was born in St. Louis, Missouri in 1995. Joe’s childhood consisted of fishing, friends, hunting, being outdoors and all the pleasantries that come with living in the midwest, but he was morbidly fascinated with the dark undertones of society that contradicted his world.",
           "As a film-obsessed freshman at the University of Missouri, Joe honed his storytelling abilities through journalism and film-intensive courseloads. Upon graduation, he worked as an editor/project coordinator on a Star Trek docu-series before giving Missouri a valedictory wave and moving to Los Angeles. While living in South Central with fifteen other people, Joe committed two years learning the technical craft of special effects for the house that handled Apocalypse Now, The Godfather, Forrest Gump, and Pirates of the Caribbean.",
@@ -22,6 +23,7 @@ export const DesktopBio = () => {
         variant={null}
         name="Cassie Ferrick"
         role="Archie"
+        alt="Photo of lead actress Cassie Ferrick"
         imgPath="/cass.jpg"
         content={[
           " Cassie is an LA based actor. She grew up in Kansas City, Missouri and began acting in high school, graduating from The University of Missouri with a B.A. in Theatre Performance. Cassie loves bikerides, hiking, music, coffee, and cats. Which are in her words 'the things people say to make themselves seem cool but relatable'.",
@@ -32,6 +34,7 @@ export const DesktopBio = () => {
         variant={null}
         name="Brandan Haskell"
         role="Cinematographer"
+        alt="Photo of cinematographer Brandan Haskell"
         imgPath="/brandan-haskell.jpg"
         content={[
           "Brandan Haskell is a filmmaker who made the great escape from the midwest to the west coast. Since moving to Los Angeles, he has helped several projects come to life through the sensor and celluloid.",
@@ -42,6 +45,7 @@ export const DesktopBio = () => {
         variant={null}
         name="Willis McCord"
         role="Producer"
+        alt="Photo of producer Willis McCord"
         imgPath="/willis.jpg"
         content={[
           ' Willis is a Virginia raised, Los Angeles based Producer. He produced the festival nominated horror short film, “Psychosis,” which is distributed by DUST, and "Meow, Meredith." He currently works for Universal Pictures in Physical Production as a Staff Coordinator.',
