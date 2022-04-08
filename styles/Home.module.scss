@@ -134,11 +134,8 @@
   }
 }
 
-.nonBio {
-  height: 100vh !important;
-}
-
 .nonBioTitle {
+  margin-top: 5rem;
   margin-bottom: 2rem;
 }
 
@@ -154,6 +151,11 @@
 // ---------------
 
 @media screen and (min-width: 670px) {
+  .titleContainer 
+  {
+    background-image: url("../public/motel-sign.png");
+    background-position: right;
+  }
   // ---------------
   // DESKTOP BIO ---
   // ---------------

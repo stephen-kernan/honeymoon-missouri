@@ -1,14 +1,22 @@
 .gridImage {
-  aspect-ratio: var(--ratio-widescreen);
   background-color: gray;
+  width: 100%;
+  margin-bottom: auto;
 }
 .gridContainer {
   display: grid;
   grid-template-rows: auto;
-  grid-template-columns: repeat(2, 1fr);
-  width: 95%;
+  grid-template-columns: 1fr;
+  width: 85%;
   margin-inline: auto;
   gap: 0.5rem;
+}
+
+.photoContainer {
+  display: flex;
+  align-items: flex-start;
+  aspect-ratio: var(--ratio-golden);
+  overflow: hidden;
 }
 
 @media screen and (min-width: 426px) {
