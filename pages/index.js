@@ -43,22 +43,43 @@ export const Home = () => {
         </div>
       </div>
       <div className={`${styles.pane} ${styles.nonBio}`}>
-        <div className={styles.paneTextContainer}>
-          <h2 className={styles.nonBioTitle}>Log Line</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis
-            quo quam, nostrum esse optio placeat incidunt. Maiores ipsa odit
-            eveniet excepturi dignissimos ex quos, eos, id consequuntur pariatur
-            temporibus iste.
-          </p>
+        <div className={styles.logLineContainer}>
+          <div className={styles.paneTextContainer}>
+            <h2 className={styles.nonBioTitle}>Log Line</h2>
+            <p>
+              A traveler's night at a remote hotel veers into the uncanny when
+              she's given a suite reserved by another customer.
+            </p>
+          </div>
+          <div className={styles.poster}></div>
         </div>
+      </div>
+      <div className={`${styles.pane} ${styles.nonBio}`}>
         <div className={styles.paneTextContainer}>
           <h2 className={styles.nonBioTitle}>Director's Statement</h2>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis
-            quo quam, nostrum esse optio placeat incidunt. Maiores ipsa odit
-            eveniet excepturi dignissimos ex quos, eos, id consequuntur pariatur
-            temporibus iste.
+            "All good hotels lead people to do things they wouldn't normally do
+            at home." Andre Balazs, Owner of the Chateau Marmont
+            <br />
+            <br />
+            For a millennium, the space for the hotel room existed undefined.
+            Mankind captured it, gave shape to it and passed through and
+            sometimes when passing through they found themselves brushing
+            against the secret truths of humanity. Honeymoon Missouri explores
+            the themes of love, life, death and darkness, taking inspiration
+            from the Coen Brothers (Fargo), Cormac McCarthy (No Country for Old
+            Men) and David Lynch (Twin Peaks). Deceptive characters are forced
+            to make morally ambiguous decisions and no other genre supports
+            these Hitchcockian scenarios better than a thriller.
+            <br />
+            <br />
+            Having grown up in Missouri, I'm drawn towards sinister stories that
+            unfold in remote parts of the country, where the lack of
+            civilization for dozens of miles invigorates the stakes. The
+            conflict explored in this film reflects the intergenerational
+            relationships of today in a confined environment. Honeymoon Missouri
+            captures the indescribable sensation of loneliness and liberation
+            that a night at a remote hotel will imbue.
           </p>
         </div>
       </div>
@@ -144,7 +165,7 @@ export const Home = () => {
           </p>
         </div>
         <div className={styles.footerContent}>
-          <h2>The director wishes to thank:</h2>
+          <h2>Special Thanks:</h2>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, vel
             voluptatum. Quisquam suscipit vel maxime illum repellat totam

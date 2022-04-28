@@ -16,6 +16,15 @@
   width: 100%;
 }
 
+.poster {
+  width: 85%;
+  margin-top: 4rem;
+  margin-inline: auto;
+  background-image: url("../public/official-poster.png");
+  background-size: cover;
+  aspect-ratio: var(--ratio-portrait);
+}
+
 .title {
   color: var(--brightBlue);
   font-family: "Pinyon Script", cursive;
@@ -89,6 +98,7 @@
 
   .paneTitle {
     font-size: 1.75rem;
+    margin-bottom: 1rem;
   }
 
   .profilePicture {
@@ -105,8 +115,8 @@
   }
 }
 
-// DARK
-.pane:nth-of-type(even) {
+// TAN
+.pane:nth-of-type(odd) {
   background-color: var(--motelLight);
   color: var(--roseRed);
 
@@ -120,8 +130,8 @@
   }
 }
 
-// TAN
-.pane:nth-of-type(odd) {
+// DARK
+.pane:nth-of-type(even) {
   background-color: var(--midnight);
   color: var(--brightBlue);
 
@@ -137,6 +147,7 @@
 .nonBioTitle {
   margin-top: 5rem;
   margin-bottom: 2rem;
+  font-size: 1.75rem;
 }
 
 .showMore {
@@ -151,11 +162,33 @@
 // ---------------
 
 @media screen and (min-width: 670px) {
-  .titleContainer 
-  {
+  .titleContainer {
     background-image: url("../public/motel-sign.png");
     background-position: right;
   }
+
+  .logLineContainer {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    padding-right: 3rem;
+
+    .nonBioTitle {
+      margin-left: 1rem !important;
+    }
+
+    p {
+      margin-left: 1rem !important;
+    }
+  }
+
+  .poster {
+    width: 100%;
+    margin-inline: auto;
+    background-image: url("../public/official-poster.png");
+    background-size: cover;
+    aspect-ratio: var(--ratio-portrait);
+  }
+
   // ---------------
   // DESKTOP BIO ---
   // ---------------
@@ -210,7 +243,7 @@
     }
 
     p {
-      margin-left: 30%;
+      margin-left: calc(20% - 2rem);
     }
   }
 }
@@ -220,6 +253,11 @@
 // ---------------
 
 @media screen and (min-width: 1024px) {
+  .titleContainer {
+    background-image: url("../public/Screengrab_5.png");
+    background-position: -15rem;
+  }
+
   .desktopBio {
     grid-template-columns: repeat(2, 1fr) !important;
 
@@ -227,25 +265,56 @@
       grid-template-columns: 3fr 5fr;
     }
   }
-  
+
+  .logLineContainer {
+    display: flex;
+    flex-flow: column;
+    width: 60%;
+    grid-template-columns: 1fr 1fr;
+    padding-right: 3rem;
+    margin-inline: auto;
+
+    .nonBioTitle {
+      margin-left: 1rem !important;
+    }
+
+    p {
+      margin-left: 1rem !important;
+    }
+  }
+
+  .poster {
+    width: 90%;
+    margin-inline: auto;
+    background-image: url("../public/official-poster.png");
+    background-size: cover;
+    aspect-ratio: var(--ratio-portrait);
+  }
+
   .nonBioTitle,
   .footerContent {
     margin-left: calc(30% - 2rem);
   }
-  
+
   .pane {
     .paneTitle {
       margin-left: calc(25% - 2rem);
     }
-    
+
     .profilePicture {
       width: 100%;
       margin-left: 25%;
     }
-    
+
     p {
       margin-left: 35%;
     }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .titleContainer {
+    background-position: -10rem;
   }
 }
 
@@ -253,6 +322,11 @@
 // LARGE-LAPTOP --
 // ---------------
 @media screen and (min-width: 1440px) {
+  .titleContainer {
+    // background-image: url("../public/Screengrab_5.png");
+    background-position: -5rem;
+  }
+
   .desktopBio {
     grid-template-columns: repeat(2, 1fr) !important;
 
