@@ -274,12 +274,12 @@ export const Home = () => {
         <div className={styles.footerContent}>
           <h2 className={styles.specialThanksText}>Special Thanks:</h2>
           <p className={styles.specialThanksText}>
-            Matthew Schacht | Liam Flaherty | Glennon M. Eckstein Dagmawi Abebe
-            | Charlie Martin | Daisy De Wolf | Caitlin Shaffrey | Alex LaMar |
-            Sam Hayes | Joseph Salvatore DiBartolo Len & Pat Eckstein | Hugo
-            Hector | Lily Harty | The Haskells | Eleonor Hayden | Matt Bozdech |
-            Mary Johnston | Martin Lindeman | The Jovaags | Mark Perry |
-            Unbridled Media Joe Curl | Mom & Dad
+            Matthew Schacht | Liam Flaherty | Glennon M. Eckstein | Dagmawi
+            Abebe | Charlie Martin | Daisy De Wolf | Caitlin Shaffrey | Alex
+            LaMar | Sam Hayes | Joseph Salvatore DiBartolo | Len & Pat Eckstein
+            | Hugo Hector | Lily Harty | The Haskells | Eleonor Hayden | Matt
+            Bozdech | Mary Johnston | Martin Lindeman | The Jovaags | Mark Perry
+            | Unbridled Media | Joe Curl | Mom & Dad
             <br />
             <br />
             Filmed entirely on location at Lake Village Hotel and Campground in
