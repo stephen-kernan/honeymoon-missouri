@@ -151,7 +151,7 @@ export const Home = () => {
       <div className={`${styles.pane} ${styles.nonBio}`}>
         <div className={styles.logLineContainer}>
           <div className={styles.paneTextContainer}>
-            <h2 className={styles.nonBioTitle}>Log Line</h2>
+            <h2 className={styles.nonBioTitle}>Logline</h2>
             <p>
               A traveler's night at a remote hotel veers into the uncanny when
               she's given a suite reserved by another customer.
