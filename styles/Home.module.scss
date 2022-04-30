@@ -181,8 +181,8 @@
 
   .logLineContainer {
     display: grid;
-    grid-template-columns: 2fr 1fr;
-    padding-right: 3rem;
+    grid-template-columns: 1fr 2fr;
+    padding-left: 3rem;
 
     .nonBioTitle {
       margin-left: 1rem !important;
@@ -300,9 +300,9 @@
 
   .logLineContainer {
     flex-flow: column;
-    width: 60%;
+    width: 80%;
     grid-template-columns: 1fr 1fr;
-    padding-right: 3rem;
+    // padding-right: 3rem;
     margin-inline: auto;
 
     .nonBioTitle {
@@ -355,6 +355,10 @@
   .titleContainer {
     // background-image: url("../public/Screengrab_5.png");
     background-position: -5rem;
+  }
+
+  .logLineContainer {
+    width: 60%;
   }
 
   .desktopBio {
