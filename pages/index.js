@@ -10,6 +10,112 @@ import { useWindowSize } from "../helpers/useWindowSize";
 export const Home = () => {
   const size = useWindowSize();
   const [width] = useState(size.width);
+  const roles = [
+    {
+      role: "Writer and Director",
+      name: "Joe Eckstein",
+    },
+    {
+      role: "Producer",
+      name: "Willis McCord",
+    },
+    {
+      role: "Co-Producer",
+      name: "Michael Coleman",
+    },
+    {
+      role: "Director of Photography",
+      name: "Brandan Haskell",
+    },
+    {
+      role: "Production Designer",
+      name: "Ashley Marshall",
+    },
+    {
+      role: "Editor",
+      name: "Jonah Ackerman",
+    },
+    {
+      role: "Composer",
+      name: "Zachary Zito",
+    },
+    {
+      role: "Casting",
+      name: "Micah Schiff",
+    },
+    {
+      role: "1st AD",
+      name: "Zachary Beining",
+    },
+    {
+      role: "Archie",
+      name: "Cassie Ferrick",
+    },
+    {
+      role: "Stephen",
+      name: "George Hovis",
+    },
+    {
+      role: "Lorraine",
+      name: "Coleen Tutton",
+    },
+    {
+      role: "Clerk",
+      name: "Sean McAninch",
+    },
+    {
+      role: "Lunatic",
+      name: "David Crespy",
+    },
+    {
+      role: "1st AC",
+      name: "Andy Ramirez",
+    },
+    {
+      role: "2nd AC/Swing",
+      name: "Josh Theus",
+    },
+    {
+      role: "Gaffer",
+      name: "Jordan Lundy",
+    },
+    {
+      role: "Boom Operator",
+      name: "Bryan Brayton",
+    },
+    {
+      role: "Production Assistant",
+      name: "Phoebe Gadsden",
+    },
+    {
+      role: "Production Assistant",
+      name: "Reiss Wegmen",
+    },
+    {
+      role: "Sound Mix",
+      name: "Brian Gross",
+    },
+    {
+      role: "VFX",
+      name: "Stephen Burchell",
+    },
+    {
+      role: "Colorist",
+      name: "Brandan Haskell",
+    },
+    {
+      role: "Picture Car",
+      name: "Andy Ramirez",
+    },
+    {
+      role: "2nd-Unit Cinematography",
+      name: "Aaron Phillips",
+    },
+    {
+      role: "Catering & Craft Services",
+      name: "Sally Haskell",
+    },
+  ];
 
   return (
     <div className={styles.container}>
@@ -156,32 +262,33 @@ export const Home = () => {
       />
       <footer className={styles.footer}>
         <div className={styles.footerContent}>
-          <h2>Credits</h2>
-          <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloremque
-            nostrum repellendus iure natus sunt commodi similique fuga magnam,
-            porro optio quasi rerum voluptas id mollitia soluta corporis totam
-            debitis amet!
-          </p>
+          <h2 className={styles.specialThanksText}>Credits</h2>
+          <div className={styles.credits}>
+            {roles.map((role) => (
+              <p>
+                {role.name} – <i>{role.role}</i>
+              </p>
+            ))}
+          </div>
         </div>
         <div className={styles.footerContent}>
-          <h2>Special Thanks:</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, vel
-            voluptatum. Quisquam suscipit vel maxime illum repellat totam
-            doloribus rerum neque, dolorem voluptatibus quod repellendus sit
-            animi eos quasi excepturi?
+          <h2 className={styles.specialThanksText}>Special Thanks:</h2>
+          <p className={styles.specialThanksText}>
+            Matthew Schacht | Liam Flaherty | Glennon M. Eckstein Dagmawi Abebe
+            | Charlie Martin | Daisy De Wolf | Caitlin Shaffrey | Alex LaMar |
+            Sam Hayes | Joseph Salvatore DiBartolo Len & Pat Eckstein | Hugo
+            Hector | Lily Harty | The Haskells | Eleonor Hayden | Matt Bozdech |
+            Mary Johnston | Martin Lindeman | The Jovaags | Mark Perry |
+            Unbridled Media Joe Curl | Mom & Dad
+            <br />
+            <br />
+            Filmed entirely on location at Lake Village Hotel and Campground in
+            Paris, MO.
+            <br />
+            <br />
+            In Association with PEACE FRAME PRODUCTIONS
           </p>
         </div>
-        {/* <div className={styles.footerContent}>
-          <h2>With special thanks to:</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum qui
-            cupiditate deleniti facilis at natus provident animi ipsum,
-            similique molestias sequi modi dicta sapiente consequatur, corporis
-            consectetur consequuntur amet quibusdam!
-          </p>
-        </div> */}
         <div className={styles.footerLogo}>
           <a
             rel="noreferrer"

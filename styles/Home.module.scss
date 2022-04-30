@@ -32,6 +32,18 @@
   padding-left: 2rem;
   padding-top: 3.5rem;
 }
+
+.specialThanksText {
+  line-height: 1.75rem;
+  max-inline-size: none;
+}
+
+.credits {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.5rem;
+}
+
 .footer {
   background-color: var(--midnight);
   font-family: "Epilogue", sans-serif;
@@ -44,13 +56,13 @@
 
   h2 {
     color: var(--brightBlue);
-    font-family: "Playfair Display", serif;
+    font-family: "Ramaraja", serif;
     margin-bottom: 2rem;
   }
 }
 
 .footerContent {
-  margin-block: 2rem;
+  margin-block: 4rem;
 }
 .footerLogo {
   display: flex;
@@ -77,7 +89,7 @@
   display: grid;
 
   h2 {
-    font-family: "Playfair Display", serif;
+    font-family: "Ramaraja", serif;
     padding-left: 2rem;
   }
 
@@ -97,7 +109,7 @@
   }
 
   .paneTitle {
-    font-size: 1.75rem;
+    font-size: 2rem;
     margin-bottom: 1rem;
   }
 
@@ -147,7 +159,7 @@
 .nonBioTitle {
   margin-top: 5rem;
   margin-bottom: 2rem;
-  font-size: 1.75rem;
+  font-size: 2.5rem;
 }
 
 .showMore {
@@ -181,12 +193,25 @@
     }
   }
 
+  .specialThanksText {
+    width: 85%;
+    margin-inline: auto;
+  }
+
+  .credits {
+    margin-inline: auto;
+    width: 85%;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
   .poster {
     width: 100%;
     margin-inline: auto;
     background-image: url("../public/official-poster.png");
     background-size: cover;
     aspect-ratio: var(--ratio-portrait);
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
   }
 
   // ---------------
@@ -227,8 +252,7 @@
     }
   }
 
-  .nonBioTitle,
-  .footerContent {
+  .nonBioTitle {
     margin-left: calc(20% - 2rem);
   }
 
@@ -258,6 +282,14 @@
     background-position: -15rem;
   }
 
+  .specialThanksText {
+    width: 85%;
+  }
+
+  .credits {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
   .desktopBio {
     grid-template-columns: repeat(2, 1fr) !important;
 
@@ -267,7 +299,6 @@
   }
 
   .logLineContainer {
-    display: flex;
     flex-flow: column;
     width: 60%;
     grid-template-columns: 1fr 1fr;
@@ -291,8 +322,7 @@
     aspect-ratio: var(--ratio-portrait);
   }
 
-  .nonBioTitle,
-  .footerContent {
+  .nonBioTitle {
     margin-left: calc(30% - 2rem);
   }
 

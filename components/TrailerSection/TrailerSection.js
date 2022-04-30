@@ -4,6 +4,9 @@ import trailer from "./TrailerSection.module.scss";
 export const TrailerSection = ({ variant }) => {
   return (
     <div className={`${home.pane} ${home[variant]}`}>
+      <div className={trailer.trailerTitleContainer}>
+        <h2 className={trailer.trailerTitle}>Official Trailer</h2>
+      </div>
       <span className={trailer.trailerBox}>
         <iframe
           width="100%"
