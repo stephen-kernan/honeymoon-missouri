@@ -18,15 +18,31 @@
 
 #logLine {
   grid-area: log-line;
+
+  p {
+    margin-left: 0 !important;
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 #directorStatement {
   grid-area: directors-statement;
+
+  h2,
+  p {
+    margin-left: 0 !important;
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 #poster {
   grid-area: poster;
+  aspect-ratio: 15/22;
 }
 
 .logLineContainer {
+  width: 85%;
+  margin-inline: auto;
   display: grid;
   grid-template-areas:
     "log-line"
@@ -35,7 +51,7 @@
 }
 
 .poster {
-  width: 85%;
+  width: 100%;
   margin-top: 4rem;
   margin-inline: auto;
   background-image: url("../public/official-poster.png");
@@ -197,18 +213,32 @@
     background-position: -30rem;
   }
 
-  .logLineContainer {
-    display: grid;
-    width: 85%;
-    margin-inline: auto;
-    grid-template-columns: 1fr;
-
-    .nonBioTitle {
-      margin-left: 1rem !important;
-    }
+  #logLine {
+    margin-bottom: 5rem;
 
     p {
-      margin-left: 1rem !important;
+      // margin-left: 0 !important;
+      padding-left: 0 !important;
+    }
+  }
+  #directorStatement {
+    h2 {
+      margin-top: 0;
+    }
+  }
+
+  .logLineContainer {
+    width: 85%;
+    gap: 1rem;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "log-line log-line"
+      "directors-statement poster";
+    // padding-right: 3rem;
+    margin-inline: auto;
+
+    p {
+      max-inline-size: none;
     }
   }
 
@@ -224,7 +254,9 @@
   }
 
   .poster {
-    width: 85%;
+    width: 100%;
+    margin-top: 0;
+
     background-image: url("../public/official-poster.png");
     background-size: cover;
   }
@@ -314,7 +346,7 @@
   }
 
   #logLine {
-    margin-bottom: 5rem;
+    margin-bottom: 3rem;
 
     p {
       // margin-left: 0 !important;
@@ -329,6 +361,7 @@
 
   .logLineContainer {
     width: 85%;
+    gap: 2rem;
     grid-template-columns: 1fr 2fr;
     grid-template-areas:
       "log-line log-line"
@@ -342,8 +375,8 @@
   }
 
   .poster {
-    width: 90%;
-    margin-top: 0;
+    width: 100%;
+    margin-top: 0.25rem;
     background-image: url("../public/official-poster.png");
   }
 
@@ -386,7 +419,7 @@
     h2,
     p {
       margin-left: 0 !important;
-      padding-left: 1rem !important;
+      padding-left: 0rem !important;
     }
   }
 
