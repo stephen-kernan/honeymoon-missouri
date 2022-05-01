@@ -424,7 +424,8 @@
   }
 
   .logLineContainer {
-    width: 80%;
+    width: 60%;
+    gap: 3rem;
     grid-template-columns: 1fr 1fr;
     grid-template-areas:
       "poster log-line"
