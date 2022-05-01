@@ -41,7 +41,7 @@ export const Home = () => {
 
       <div className={styles.main}>
         <div className={styles.titleContainer}>
-          <h1 className={styles.title}>Honeymoon Missouri</h1>
+          <div className={styles.poster} id={styles.poster}></div>
         </div>
       </div>
       <div className={`${styles.pane} ${styles.nonBio}`}>
@@ -52,7 +52,6 @@ export const Home = () => {
               she's given a suite reserved by another customer.
             </p>
           </div>
-          <div className={styles.poster} id={styles.poster}></div>
           <div className={`${styles.nonBio}`} id={styles.directorStatement}>
             <div className={styles.paneTextContainer}>
               <h2 className={styles.nonBioTitle}>Director's Statement</h2>

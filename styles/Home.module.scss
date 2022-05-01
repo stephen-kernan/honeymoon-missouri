@@ -35,12 +35,13 @@
 }
 
 .poster {
-  width: 85%;
-  margin-top: 4rem;
-  margin-inline: auto;
+  width: 25% !important;
+  margin-top: 6rem !important;
+  // margin-block: auto;
+  margin-left: 4rem;
   background-image: url("../public/official-poster.png");
-  background-size: contain;
-  aspect-ratio: var(--ratio-portrait);
+  // height: 60%;
+  aspect-ratio: 15/23;
 }
 
 .title {
@@ -329,10 +330,10 @@
 
   .logLineContainer {
     width: 85%;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 1fr;
     grid-template-areas:
-      "log-line log-line"
-      "poster directors-statement";
+      "log-line"
+      "directors-statement";
     // padding-right: 3rem;
     margin-inline: auto;
 
@@ -385,17 +386,25 @@
   #directorStatement {
     h2,
     p {
-      margin-left: 0 !important;
+      // margin-left: 0 !important;
       padding-left: 1rem !important;
+    }
+
+    h2 {
+      margin-left: 0 !important;
+    }
+
+    p {
+      margin-left: 4rem !important;
     }
   }
 
   .logLineContainer {
-    width: 80%;
-    grid-template-columns: 1fr 1fr;
+    width: 60%;
+    grid-template-columns: 1fr;
     grid-template-areas:
-      "poster log-line"
-      "poster directors-statement";
+      "log-line"
+      "directors-statement";
   }
 
   .desktopBio {
