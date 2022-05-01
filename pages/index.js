@@ -6,116 +6,12 @@ import { TrailerSection } from "../components/TrailerSection/TrailerSection";
 import styles from "../styles/Home.module.scss";
 import { useState } from "react";
 import { useWindowSize } from "../helpers/useWindowSize";
+import { useCredits } from "../helpers/useCredits";
 
 export const Home = () => {
   const size = useWindowSize();
   const [width] = useState(size.width);
-  const roles = [
-    {
-      role: "Writer and Director",
-      name: "Joe Eckstein",
-    },
-    {
-      role: "Producer",
-      name: "Willis McCord",
-    },
-    {
-      role: "Co-Producer",
-      name: "Michael Coleman",
-    },
-    {
-      role: "Director of Photography",
-      name: "Brandan Haskell",
-    },
-    {
-      role: "Production Designer",
-      name: "Ashley Marshall",
-    },
-    {
-      role: "Editor",
-      name: "Jonah Ackerman",
-    },
-    {
-      role: "Composer",
-      name: "Zachary Zito",
-    },
-    {
-      role: "Casting",
-      name: "Micah Schiff",
-    },
-    {
-      role: "1st AD",
-      name: "Zachary Beining",
-    },
-    {
-      role: "Archie",
-      name: "Cassie Ferrick",
-    },
-    {
-      role: "Stephen",
-      name: "George Hovis",
-    },
-    {
-      role: "Lorraine",
-      name: "Coleen Tutton",
-    },
-    {
-      role: "Clerk",
-      name: "Sean McAninch",
-    },
-    {
-      role: "Lunatic",
-      name: "David Crespy",
-    },
-    {
-      role: "1st AC",
-      name: "Andy Ramirez",
-    },
-    {
-      role: "2nd AC/Swing",
-      name: "Josh Theus",
-    },
-    {
-      role: "Gaffer",
-      name: "Jordan Lundy",
-    },
-    {
-      role: "Boom Operator",
-      name: "Bryan Brayton",
-    },
-    {
-      role: "Production Assistant",
-      name: "Phoebe Gadsden",
-    },
-    {
-      role: "Production Assistant",
-      name: "Reiss Wegmen",
-    },
-    {
-      role: "Sound Mix",
-      name: "Brian Gross",
-    },
-    {
-      role: "VFX",
-      name: "Stephen Burchell",
-    },
-    {
-      role: "Colorist",
-      name: "Brandan Haskell",
-    },
-    {
-      role: "Picture Car",
-      name: "Andy Ramirez",
-    },
-    {
-      role: "2nd-Unit Cinematography",
-      name: "Aaron Phillips",
-    },
-    {
-      role: "Catering & Craft Services",
-      name: "Sally Haskell",
-    },
-  ];
+  const { roles } = useCredits();
 
   return (
     <div className={styles.container}>
@@ -150,43 +46,43 @@ export const Home = () => {
       </div>
       <div className={`${styles.pane} ${styles.nonBio}`}>
         <div className={styles.logLineContainer}>
-          <div className={styles.paneTextContainer}>
-            <h2 className={styles.nonBioTitle}>Logline</h2>
+          <div className={styles.paneTextContainer} id={styles.logLine}>
             <p>
               A traveler's night at a remote hotel veers into the uncanny when
               she's given a suite reserved by another customer.
             </p>
           </div>
-          <div className={styles.poster}></div>
-        </div>
-      </div>
-      <div className={`${styles.pane} ${styles.nonBio}`}>
-        <div className={styles.paneTextContainer}>
-          <h2 className={styles.nonBioTitle}>Director's Statement</h2>
-          <p>
-            "All good hotels lead people to do things they wouldn't normally do
-            at home." Andre Balazs, Owner of the Chateau Marmont
-            <br />
-            <br />
-            For a millennium, the space for the hotel room existed undefined.
-            Mankind captured it, gave shape to it and passed through and
-            sometimes when passing through they found themselves brushing
-            against the secret truths of humanity. Honeymoon Missouri explores
-            the themes of love, life, death and darkness, taking inspiration
-            from the Coen Brothers (Fargo), Cormac McCarthy (No Country for Old
-            Men) and David Lynch (Twin Peaks). Deceptive characters are forced
-            to make morally ambiguous decisions and no other genre supports
-            these Hitchcockian scenarios better than a thriller.
-            <br />
-            <br />
-            Having grown up in Missouri, I'm drawn towards sinister stories that
-            unfold in remote parts of the country, where the lack of
-            civilization for dozens of miles invigorates the stakes. The
-            conflict explored in this film reflects the intergenerational
-            relationships of today in a confined environment. Honeymoon Missouri
-            captures the indescribable sensation of loneliness and liberation
-            that a night at a remote hotel will imbue.
-          </p>
+          <div className={styles.poster} id={styles.poster}></div>
+          <div className={`${styles.nonBio}`} id={styles.directorStatement}>
+            <div className={styles.paneTextContainer}>
+              <h2 className={styles.nonBioTitle}>Director's Statement</h2>
+              <p>
+                "All good hotels lead people to do things they wouldn't normally
+                do at home." Andre Balazs, Owner of the Chateau Marmont
+                <br />
+                <br />
+                For a millennium, the space for the hotel room existed
+                undefined. Mankind captured it, gave shape to it and passed
+                through and sometimes when passing through they found themselves
+                brushing against the secret truths of humanity. Honeymoon
+                Missouri explores the themes of love, life, death and darkness,
+                taking inspiration from the Coen Brothers (Fargo), Cormac
+                McCarthy (No Country for Old Men) and David Lynch (Twin Peaks).
+                Deceptive characters are forced to make morally ambiguous
+                decisions and no other genre supports these Hitchcockian
+                scenarios better than a thriller.
+                <br />
+                <br />
+                Having grown up in Missouri, I'm drawn towards sinister stories
+                that unfold in remote parts of the country, where the lack of
+                civilization for dozens of miles invigorates the stakes. The
+                conflict explored in this film reflects the intergenerational
+                relationships of today in a confined environment. Honeymoon
+                Missouri captures the indescribable sensation of loneliness and
+                liberation that a night at a remote hotel will imbue.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
       <TrailerSection variant="tan" />

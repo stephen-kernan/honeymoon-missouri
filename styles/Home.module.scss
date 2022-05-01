@@ -9,11 +9,29 @@
 }
 
 .titleContainer {
-  background-image: url("../public/motel-sign-mobile.png");
+  background-image: url("../public/Screengrab_5.png");
   background-size: cover;
-  background-position: -2em;
+  background-position: -51rem;
   height: 100%;
   width: 100%;
+}
+
+#logLine {
+  grid-area: log-line;
+}
+#directorStatement {
+  grid-area: directors-statement;
+}
+#poster {
+  grid-area: poster;
+}
+
+.logLineContainer {
+  display: grid;
+  grid-template-areas:
+    "log-line"
+    "poster"
+    "directors-statement";
 }
 
 .poster {
@@ -21,7 +39,7 @@
   margin-top: 4rem;
   margin-inline: auto;
   background-image: url("../public/official-poster.png");
-  background-size: cover;
+  background-size: contain;
   aspect-ratio: var(--ratio-portrait);
 }
 
@@ -128,7 +146,7 @@
 }
 
 // TAN
-.pane:nth-of-type(odd) {
+.pane:nth-of-type(even) {
   background-color: var(--motelLight);
   color: var(--roseRed);
 
@@ -143,7 +161,7 @@
 }
 
 // DARK
-.pane:nth-of-type(even) {
+.pane:nth-of-type(odd) {
   background-color: var(--midnight);
   color: var(--brightBlue);
 
@@ -175,14 +193,15 @@
 
 @media screen and (min-width: 670px) {
   .titleContainer {
-    background-image: url("../public/motel-sign.png");
-    background-position: right;
+    background-image: url("../public/Screengrab_5.png");
+    background-position: -30rem;
   }
 
   .logLineContainer {
     display: grid;
-    grid-template-columns: 1fr 2fr;
-    padding-left: 3rem;
+    width: 85%;
+    margin-inline: auto;
+    grid-template-columns: 1fr;
 
     .nonBioTitle {
       margin-left: 1rem !important;
@@ -205,13 +224,9 @@
   }
 
   .poster {
-    width: 100%;
-    margin-inline: auto;
+    width: 85%;
     background-image: url("../public/official-poster.png");
     background-size: cover;
-    aspect-ratio: var(--ratio-portrait);
-    grid-column: 1 / 2;
-    grid-row: 1 / 2;
   }
 
   // ---------------
@@ -298,28 +313,38 @@
     }
   }
 
+  #logLine {
+    margin-bottom: 5rem;
+
+    p {
+      // margin-left: 0 !important;
+      padding-left: 0 !important;
+    }
+  }
+  #directorStatement {
+    h2 {
+      margin-top: 0;
+    }
+  }
+
   .logLineContainer {
-    flex-flow: column;
-    width: 80%;
-    grid-template-columns: 1fr 1fr;
+    width: 85%;
+    grid-template-columns: 1fr 2fr;
+    grid-template-areas:
+      "log-line log-line"
+      "poster directors-statement";
     // padding-right: 3rem;
     margin-inline: auto;
 
-    .nonBioTitle {
-      margin-left: 1rem !important;
-    }
-
     p {
-      margin-left: 1rem !important;
+      max-inline-size: none;
     }
   }
 
   .poster {
     width: 90%;
-    margin-inline: auto;
+    margin-top: 0;
     background-image: url("../public/official-poster.png");
-    background-size: cover;
-    aspect-ratio: var(--ratio-portrait);
   }
 
   .nonBioTitle {
@@ -357,8 +382,20 @@
     background-position: -5rem;
   }
 
+  #directorStatement {
+    h2,
+    p {
+      margin-left: 0 !important;
+      padding-left: 1rem !important;
+    }
+  }
+
   .logLineContainer {
-    width: 60%;
+    width: 80%;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "poster log-line"
+      "poster directors-statement";
   }
 
   .desktopBio {
